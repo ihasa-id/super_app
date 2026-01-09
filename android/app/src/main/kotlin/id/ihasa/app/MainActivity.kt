@@ -1,4 +1,4 @@
-package id.carik.superapp_demo
+package id.ihasa.app
 
 import io.flutter.embedding.android.FlutterActivity
 

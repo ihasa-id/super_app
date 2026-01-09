@@ -29,7 +29,7 @@ Super App Boilerplate is a mobile application (Android & iOS) built with Clean A
 
 | Aspect | Description |
 |--------|-------------|
-| **Org/Package** | `id.carik.superapp_demo` |
+| **Org/Package** | `id.ihasa.app` |
 | **Framework** | Flutter (Android & iOS) |
 | **UI Standard** | Material 3 (`useMaterial3: true`) |
 | **Architecture** | Clean Architecture + Modular |
