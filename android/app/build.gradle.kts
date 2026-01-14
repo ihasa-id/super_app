@@ -66,8 +66,26 @@ android {
     }
 
     signingConfigs {
+        // Debug signing configuration - uses custom debug.keystore from keystores folder
+        getByName("debug") {
+
+            // default key store
+            // read readme to generate debug keystore
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
+            storeFile = rootProject.file("keystores/debug.keystore")
+            storePassword = "android"
+
+            // if (keystorePropertiesFile.exists() && keystoreProperties.containsKey("debugStoreFile")) {
+            //     keyAlias = keystoreProperties["debugKeyAlias"] as String
+            //     keyPassword = keystoreProperties["debugKeyPassword"] as String
+            //     storeFile = rootProject.file(keystoreProperties["debugStoreFile"] as String)
+            //     storePassword = keystoreProperties["debugStorePassword"] as String
+            // }
+        }
+        // Release signing configuration
         create("release") {
-            if (keystorePropertiesFile.exists()) {
+            if (keystorePropertiesFile.exists() && keystoreProperties.containsKey("storeFile")) {
                 keyAlias = keystoreProperties["keyAlias"] as String
                 keyPassword = keystoreProperties["keyPassword"] as String
                 storeFile = rootProject.file(keystoreProperties["storeFile"] as String)
