@@ -98,8 +98,8 @@ dependencies:
     path: packages/module_interface
 
   # External Modules (from modules/ folder) - Example
-  super_module:
-    path: modules/super_module
+  arrow_sense:
+    path: modules/arrow_sense
 
   # crm:
   #   path: modules/crm
